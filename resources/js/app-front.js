@@ -1,10 +1,6 @@
 require('./bootstrap');
 window.axios= require('axios');
 
-window.axios.get('/api/posts').then(result=>{
-    console.log(result);
-})
-
 window.Vue = require('vue');
 
 import AppComponent from './app/AppComponent'

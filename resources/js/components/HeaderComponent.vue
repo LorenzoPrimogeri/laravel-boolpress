@@ -3,7 +3,7 @@
     <nav class="container">
         <ul class="nav">
             <li v-for="(item,index) in menu" :key="index" class="nav-item mr-4">
-            <router-link :to="{name:item.linkname}">{{item.label}}</router-link>
+            <router-link :to="{name:item.linkName}">{{item.label}}</router-link>
             </li>
         </ul>
     </nav>

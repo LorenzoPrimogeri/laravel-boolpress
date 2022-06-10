@@ -3,11 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Post;
-use Facade\FlareClient\View;
 use Illuminate\Http\Request;
+use App\Category;
 
-class PostController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('category')->get();
-        $result = ['results' => $posts, 'success' => true];
+        $categories = Category::all();
+        $result = ['results' => $categories, 'success' => true];
         return response()->json($result);
     }
 
@@ -50,8 +49,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::where('id', $id)->with(['category', 'tags'])->first();
-        $result = ['results' => $post, 'success' => true];
+        $category = Category::find($id);
+        $result = ['result'=>$category , 'success' => true];
         return response()->json($result);
     }
 

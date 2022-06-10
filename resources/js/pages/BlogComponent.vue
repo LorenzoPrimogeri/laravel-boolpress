@@ -30,7 +30,7 @@ export default {
  },
  mounted(){
     window.axios.get('/api/posts').then(result=>{
-        this.posts=result.data;
+        this.posts=result.data.results;
     console.log( this.posts);
 })
  }

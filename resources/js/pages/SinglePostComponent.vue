@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <!-- dettaglio di {{post.title}} -->
+  <div v-if="post">
+    dettaglio di {{post.title}}
+  </div>
+  <div v-else>
+   caricament oin corso
   </div>
 </template>
 
@@ -14,12 +17,11 @@ data(){
 },
 props:[],
  mounted(){
-   const id= this.$route.params.id;
-
-   console.log(id);
-    window.axios.get('http://127.0.0.1:8000/api/posts/'+ id).then(result=>{
-        console.log/('sono nel mounted');
-        this.post=result.data;
+    const id= this.$route.params.id;
+    const url='/api/posts/'+id;
+    window.axios.get(url).then(result=>{
+        console.log('ciao');
+        this.post=result.data.results;
     })
 }
 }

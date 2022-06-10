@@ -6,7 +6,7 @@
                 Tutti i Posts
             </h1>
         </div>
-        <div v-if="posts.length>0">
+        <div v-if="posts.length>0" class="container">
             <PostCardListComponent :posts='posts'/>
         </div>
         <div v-else>

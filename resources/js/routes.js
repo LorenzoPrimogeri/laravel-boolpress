@@ -6,7 +6,8 @@ Vue.use(VueRouter);
 import HomeComponent from './pages/HomeComponent' 
 import NotFoundComponent from './pages/NotFoundComponent' 
 import BlogComponent from './pages/BlogComponent' 
-import WhoWeAreComponent from './pages/WhoWeAreComponent' 
+import WhoWeAreComponent from './pages/WhoWeAreComponent'
+import SinglePostComponent from './pages/SinglePostComponent' 
 
 const router= new VueRouter({
     mode:'history',
@@ -26,7 +27,11 @@ const router= new VueRouter({
             name:'who-we-are',
             component:WhoWeAreComponent
         },
-
+        {
+            path:'/blog/:id',
+            name:'single-post',
+            component:SinglePostComponent
+        },
         {
             path:'/*',
             name:'notfound',

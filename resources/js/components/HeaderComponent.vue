@@ -18,6 +18,7 @@ export default {
             menu:[
                 {linkName :'home', label:'Home'},
                 {linkName :'blog', label:'Blog'},
+                 {linkName :'categories', label:'Category'},
                 {linkName :'who-we-are', label:'Chi siamo'}
             ]
         }

@@ -11,7 +11,7 @@
             <h4>{{content}}</h4>
         </div>
         <div class="col-3 border-bottom">
-            <router-link :to="{ name: 'single-post', params:{id} }">>Visualizza</router-link>
+            <router-link :to="{ name: 'single-post', params:{slug} }">>Visualizza</router-link>
         </div>
     </div>
 </div>
@@ -20,7 +20,7 @@
 <script>
 export default {
     name:'PostCardComponent',
-    props:['title','content','id'],
+    props:['title','content','slug','id'],
 }
 </script>
 

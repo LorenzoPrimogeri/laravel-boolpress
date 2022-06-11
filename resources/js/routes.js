@@ -8,6 +8,8 @@ import NotFoundComponent from './pages/NotFoundComponent'
 import BlogComponent from './pages/BlogComponent' 
 import WhoWeAreComponent from './pages/WhoWeAreComponent'
 import SinglePostComponent from './pages/SinglePostComponent' 
+import CategoriesComponent from './pages/CategoriesComponent' 
+import PostCategoriesComponent from './pages/PostCategoriesComponent'
 
 const router= new VueRouter({
     mode:'history',
@@ -28,9 +30,20 @@ const router= new VueRouter({
             component:WhoWeAreComponent
         },
         {
-            path:'/blog/:id',
+            path:'/blog/:slug',
             name:'single-post',
             component:SinglePostComponent
+        },
+        {
+            path:'/categories',
+            name:'categories',
+            component:CategoriesComponent
+        },
+
+        {
+            path:'/categories/:id',
+            name:'post-per-category',
+            component:PostCategoriesComponent
         },
         {
             path:'/*',

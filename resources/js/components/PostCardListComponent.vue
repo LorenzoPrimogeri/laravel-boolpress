@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="(post,index) in posts" :key="index">
-        <PostCardComponent :title='post.title' :id='post.id' :content='post.content'/>
+        <PostCardComponent :title='post.title' :id='post.id' :content='post.content' :slug='post.slug'/>
 
     </div>
   </div>
